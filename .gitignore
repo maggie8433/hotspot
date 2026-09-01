@@ -1,10 +1,29 @@
 HELP.md
+
+# Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local Spring configuration
+src/main/resources/application-local.properties
+src/main/resources/application-local.yml
+src/main/resources/application-local.yaml
+
+# Logs
+*.log
+logs/
+
+# macOS
+.DS_Store
+
+### STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +32,13 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+### IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+### NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,8 +48,11 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+### VS Code
 .vscode/
 
-# Local database configuration
-src/main/resources/application-local.properties
+# Database dumps and backups
+*.dump
+*.backup
+*.bak
+*.sql.gz
