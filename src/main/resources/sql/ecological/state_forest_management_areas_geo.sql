@@ -22,11 +22,11 @@ SELECT jsonb_build_object(
 
                 'geometry',
                 ST_AsGeoJSON(
-                    ST_Transform(
-                        geom,
-                        4326
-                    )
-                )::jsonb
+                ST_SimplifyPreserveTopology(
+                    ST_Transform(geom, 4326),
+                    0.0001
+                )
+            )::jsonb
             )
         ),
         '[]'::jsonb
