@@ -15,10 +15,12 @@ public class WebConfig implements WebMvcConfigurer {
         registry
                 .addMapping("/api/**")
                 .allowedOrigins(
+                        "https://hotspot-frontend-production.up.railway.app",
                         "http://localhost:5173"
                 )
                 .allowedMethods(
-                        "GET"
+                        "GET",
+                         "OPTIONS"
                 );
     }
 }
